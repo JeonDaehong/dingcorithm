@@ -21,6 +21,7 @@ def get_count_of_ways_to_target_by_doing_plus_or_minus(array, target):
     rtn_array = []
 
     def execute(cur_sum, cur_idx):
+
         # 더 할 거 없으면 리턴
         # 매개 변수로 들어온 어레이 길이랑 전체 어레이 길이를 비교
         if cur_idx == len_array:
@@ -29,10 +30,10 @@ def get_count_of_ways_to_target_by_doing_plus_or_minus(array, target):
                 return
             else:
                 return
+
         # 있으면, + 하나 1 하나씩 재귀
         execute(cur_sum + array[cur_idx], cur_idx + 1)
         execute(cur_sum - array[cur_idx], cur_idx + 1)
-
 
     execute(0, 0)
 
