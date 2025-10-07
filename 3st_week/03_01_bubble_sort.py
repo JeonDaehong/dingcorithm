@@ -4,7 +4,8 @@ input = [4, 6, 2, 9, 1]
 def bubble_sort(array):
 
     for i in range(len(array)):
-        for j in range(len(array) - i - 1):
+        for j in range(len(array) - i - 1): # 뒷 부분은 이미 큰 값이 들어가서 볼 필요가 없기 때문에
+            print(i, j)
             if array[j] > array[j + 1]:
                 array[j], array[j + 1] = array[j + 1], array[j]
 
